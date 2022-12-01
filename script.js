@@ -1,13 +1,13 @@
 import { LOWER, NUMBERS, SYMBOLS, UPPER } from './constants.js';
 
 const pass = document.querySelector('#pass');
-const btnGenerate = document.querySelector('.btnGenerate');
 const range = document.querySelector('#inputRange');
 const txtRange = document.querySelector('#textRange');
 const upperInp = document.querySelector('#mayusculas');
 const lowerInp = document.querySelector('#minusculas');
 const numerosInp = document.querySelector('#numeros');
 const simbolosInp = document.querySelector('#simbolos');
+const listCheckbox = document.querySelectorAll('input[type=checkbox]');
 
 const generatePass = () => {
 	alwaysChecked();
@@ -74,21 +74,24 @@ const alwaysChecked = () => {
 	}
 };
 
+document.addEventListener('click', evt => {
+	if (evt.target.matches('.icon_refresh')) {
+		pass.value = generatePass();
+	}
+	if (evt.target.matches('.icon_copy')) return copyPass();
+	if (evt.target.matches('.btn_copy')) return copyPass();
+});
+
 range.addEventListener('input', evt => {
 	txtRange.value = Math.floor(range.value);
 	pass.value = generatePass();
 });
 
-btnGenerate.addEventListener('click', evt => {
-	pass.value = generatePass();
-});
-
-document.addEventListener('change', evt => {
-	if (evt.target.matches('#mayusculas')) pass.value = generatePass();
-	if (evt.target.matches('#minusculas')) pass.value = generatePass();
-	if (evt.target.matches('#numeros')) pass.value = generatePass();
-	if (evt.target.matches('#simbolos')) pass.value = generatePass();
-});
+for (const node of listCheckbox) {
+	node.addEventListener('change', evt => {
+		pass.value = generatePass();
+	});
+}
 
 window.addEventListener('DOMContentLoaded', evt => {
 	txtRange.value = range.value;
