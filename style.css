@@ -4,6 +4,7 @@
 	--color-blue: #fff;
 	--color-brown: brown;
 	--shadow-md: 3px 5px 3px #c3c3c3, -5px -5px 3px #fdfdfd;
+	--border-sm: 0.3125rem;
 	--border-md: 0.625rem;
 }
 
@@ -27,7 +28,7 @@ h1 {
 }
 
 .pass_cont {
-	margin: 1rem 0;
+	margin: 0.5rem 0;
 	position: relative;
 }
 
@@ -79,13 +80,13 @@ h1 {
 	transform: scale(1.1);
 }
 
-.btn_copy_pass {
-	margin: 1rem 0;
+.copy_pass {
+	font-size: 0.75rem;
+	font-style: italic;
 }
 
-.btn_copy_pass > button {
-	font-size: 1rem;
-	padding: 0.2rem 0.5rem;
+.filter_title > h3 {
+	margin: 0.5rem 0;
 }
 
 .filter_body {
