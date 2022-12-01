@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+
+:root {
+	--color-blue: #fff;
+	--color-brown: brown;
+	--shadow-md: 3px 5px 3px #c3c3c3, -5px -5px 3px #fdfdfd;
+	--border-md: 0.625rem;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+}
+
+.generador_container {
+	padding: 0 1.5rem;
+}
+
+h1 {
+	text-align: center;
+}
+
+.pass_cont {
+	margin: 1rem 0;
+	position: relative;
+}
+
+.pass_cont > input {
+	padding: 0.5rem 0.7rem;
+	width: 100%;
+	outline: none;
+	border: thin solid #c3c3c3;
+
+	border-radius: var(--border-md);
+	box-shadow: var(--shadow-md);
+
+	font-size: 1rem;
+	letter-spacing: 0.04rem;
+}
+
+.icon_refresh,
+.icon_copy {
+	font-size: 1.5rem;
+	font-weight: bold;
+	cursor: pointer;
+	color: rgb(42, 42, 42);
+}
+
+.icons_containers {
+	position: absolute;
+	display: flex;
+	gap: 0.5rem;
+	top: 50%;
+	right: 0.7rem;
+	transform: translate(0, -50%);
+
+	user-select: none;
+}
+
+.icon_refresh {
+	transition: transform 0.2s ease-in-out;
+}
+
+.icon_refresh:active {
+	transform: rotate(90deg) scale(1.1);
+}
+
+.icon_copy {
+	transition: transform 0.2s ease-in-out;
+}
+
+.icon_copy:active {
+	transform: scale(1.1);
+}
+
+.btn_copy_pass {
+	margin: 1rem 0;
+}
+
+.btn_copy_pass > button {
+	font-size: 1rem;
+	padding: 0.2rem 0.5rem;
+}
+
+.filter_body {
+	display: flex;
+	gap: 1rem;
+	margin: 1rem 0;
+	padding: 0 2rem;
+}
+
+.filter_length {
+	display: flex;
+	gap: 0.5rem;
+	flex-flow: column wrap;
+	width: 70%;
+}
+.filter_length > span {
+	font-size: 0.875rem;
+}
+
+.filter_number {
+	width: 30%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.filter_number > input {
+	width: 100%;
+	padding: 0.5rem 0.7rem;
+	font-size: 1rem;
+
+	outline: none;
+	border: thin solid #c3c3c3;
+	border-radius: var(--border-md);
+	box-shadow: var(--shadow-md);
+
+	text-align: center;
+}
+
+input[type='range'] {
+	appearance: none;
+	background-image: linear-gradient(#a9a9a9, #787878);
+	height: 0.5rem;
+	border-radius: var(--border-md);
+}
+
+input[type='range']::-webkit-slider-thumb {
+	appearance: none;
+	height: 1rem;
+	width: 1rem;
+
+	border-radius: 50%;
+	background: #1f1717;
+	cursor: pointer;
+
+	box-shadow: 0 0 2px 0 #555;
+	transition: all 1s ease-in-out;
+}
+
+.pass_opt {
+	margin: 1rem 0;
+}
+
+.pass_opt > div {
+	margin: 0.3rem 0;
+}
+
+input[type='checkbox'] {
+	width: 1rem;
+	height: 1rem;
+}
+
+label {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+@media screen and (min-width: 640px) {
+	.generador_container {
+		max-width: 500px;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
