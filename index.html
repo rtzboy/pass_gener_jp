@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PassGenerator</title>
+	</head>
+	<body>
+		<div class="generador_container">
+			<h2>Password Generator</h2>
+			<div class="pass_cont">
+				<input type="text" name="pass" id="pass" readonly />
+			</div>
+			<div>
+				<button class="btnGenerate">Generate</button>
+				<input
+					type="range"
+					name="inputRange"
+					id="inputRange"
+					max="20"
+					min="1"
+					value="8"
+				/>
+				<input type="text" name="textRange" id="textRange" readonly />
+			</div>
+			<div class="pass_opt">
+				<div>
+					<label for="mayusculas">
+						<input type="checkbox" name="mayusculas" id="mayusculas" checked />
+						<span>Uppercase</span>
+					</label>
+				</div>
+				<div>
+					<label for="minusculas">
+						<input type="checkbox" name="minusculas" id="minusculas" checked />
+						<span>Lowercase</span>
+					</label>
+				</div>
+				<div>
+					<label for="numeros">
+						<input type="checkbox" name="numeros" id="numeros" checked />
+						<span>Numbers</span>
+					</label>
+				</div>
+				<div>
+					<label for="simbolos">
+						<input type="checkbox" name="simbolos" id="simbolos" checked />
+						<span>Symbols</span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
