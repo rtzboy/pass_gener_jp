@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300&display=swap');
 
 :root {
-	--color-blue: #fff;
-	--color-brown: brown;
-	--shadow-md: 3px 5px 3px #c3c3c3, -5px -5px 3px #fdfdfd;
+	--color-blue: #1d64c7;
+	--shadow-md: 3px 3px 3px #4f8bde, -5px -5px 3px #fdfdfd;
 	--border-sm: 0.3125rem;
 	--border-md: 0.625rem;
 }
@@ -36,7 +35,7 @@ h1 {
 	padding: 0.5rem 0.7rem;
 	width: 100%;
 	outline: none;
-	border: thin solid #c3c3c3;
+	border: thin solid var(--color-blue);
 
 	border-radius: var(--border-md);
 	box-shadow: var(--shadow-md);
@@ -120,7 +119,7 @@ h1 {
 	font-size: 1rem;
 
 	outline: none;
-	border: thin solid #c3c3c3;
+	border: thin solid #1d64c7;
 	border-radius: var(--border-md);
 	box-shadow: var(--shadow-md);
 
@@ -129,7 +128,7 @@ h1 {
 
 input[type='range'] {
 	appearance: none;
-	background-image: linear-gradient(#a9a9a9, #787878);
+	background-image: linear-gradient(#9cc1f4, #1d64c7);
 	height: 0.5rem;
 	border-radius: var(--border-md);
 }
