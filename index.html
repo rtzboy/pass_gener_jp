@@ -10,59 +10,105 @@
 	<body>
 		<div class="generador_container">
 			<h1>Password Generator</h1>
-			<div class="pass_cont">
-				<input type="text" name="pass" id="pass" readonly />
-				<div class="icons_containers">
-					<span class="icon_refresh">&#8635;</span>
+			<div class="content">
+				<div class="pass_cont">
+					<input type="text" name="pass" id="pass" readonly />
+					<div class="icons_containers">
+						<span class="icon_refresh">&#8635;</span>
+					</div>
+				</div>
+				<div class="copy_pass">select and copy the pass</div>
+				<div class="filter_title">
+					<h3>Pesonalize your password</h3>
+				</div>
+				<div class="filter_body">
+					<!-- <button class="btnGenerate">Generate</button> -->
+					<div class="filter_length">
+						<span>Password Length</span>
+						<input
+							type="range"
+							name="inputRange"
+							id="inputRange"
+							max="20"
+							min="1"
+							value="12"
+						/>
+					</div>
+					<div class="filter_number">
+						<input type="text" name="textRange" id="textRange" readonly />
+					</div>
+				</div>
+				<div class="pass_opt">
+					<div>
+						<label for="mayusculas">
+							<input
+								type="checkbox"
+								name="mayusculas"
+								id="mayusculas"
+								checked
+							/>
+							<span>Uppercase</span>
+						</label>
+					</div>
+					<div>
+						<label for="minusculas">
+							<input
+								type="checkbox"
+								name="minusculas"
+								id="minusculas"
+								checked
+							/>
+							<span>Lowercase</span>
+						</label>
+					</div>
+					<div>
+						<label for="numeros">
+							<input type="checkbox" name="numeros" id="numeros" checked />
+							<span>Numbers</span>
+						</label>
+					</div>
+					<div>
+						<label for="simbolos">
+							<input type="checkbox" name="simbolos" id="simbolos" checked />
+							<span>Symbols</span>
+						</label>
+					</div>
 				</div>
 			</div>
-			<div class="copy_pass">select and copy the pass</div>
-			<div class="filter_title">
-				<h3>Pesonalize your password</h3>
-			</div>
-			<div class="filter_body">
-				<!-- <button class="btnGenerate">Generate</button> -->
-				<div class="filter_length">
-					<span>Password Length</span>
-					<input
-						type="range"
-						name="inputRange"
-						id="inputRange"
-						max="20"
-						min="1"
-						value="12"
-					/>
-				</div>
-				<div class="filter_number">
-					<input type="text" name="textRange" id="textRange" readonly />
-				</div>
-			</div>
-			<div class="pass_opt">
-				<div>
-					<label for="mayusculas">
-						<input type="checkbox" name="mayusculas" id="mayusculas" checked />
-						<span>Uppercase</span>
-					</label>
-				</div>
-				<div>
-					<label for="minusculas">
-						<input type="checkbox" name="minusculas" id="minusculas" checked />
-						<span>Lowercase</span>
-					</label>
-				</div>
-				<div>
-					<label for="numeros">
-						<input type="checkbox" name="numeros" id="numeros" checked />
-						<span>Numbers</span>
-					</label>
-				</div>
-				<div>
-					<label for="simbolos">
-						<input type="checkbox" name="simbolos" id="simbolos" checked />
-						<span>Symbols</span>
-					</label>
-				</div>
-			</div>
+			<footer class="footer">
+				<div class="footer_title">Jhoseph Poma</div>
+				<ul class="footer_links">
+					<li>
+						<a
+							href="https://www.facebook.com/joseph.22.12/"
+							target="_blank"
+							rel="noreferrer"
+							>Facebook</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.instagram.com/jhoseph2212/"
+							target="_blank"
+							rel="noreferrer"
+							>Instagram</a
+						>
+					</li>
+					<li>
+						<a href="https://github.com/rtzboy" target="_blank" rel="noreferrer"
+							>Github</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://twitter.com/JhosephPoma"
+							target="_blank"
+							rel="noreferrer"
+							>Twitter</a
+						>
+					</li>
+				</ul>
+			</footer>
 		</div>
 		<script src="script.js" type="module"></script>
 	</body>

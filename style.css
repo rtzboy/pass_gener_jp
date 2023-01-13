@@ -19,11 +19,18 @@ body {
 }
 
 .generador_container {
-	padding: 0 1.5rem;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	padding: 0 2rem;
 }
 
 h1 {
 	text-align: center;
+	margin: 0;
+	padding-top: 2rem;
+	padding-bottom: 1rem;
 }
 
 .pass_cont {
@@ -165,11 +172,45 @@ label {
 	gap: 0.5rem;
 }
 
+.footer {
+	padding: 1.5rem 0;
+	text-align: center;
+	margin-top: auto;
+}
+
+.footer_title {
+	font-weight: 700;
+	font-style: italic;
+}
+
+.footer_links {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin: 0;
+	padding: 0;
+}
+
+.footer_links > li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link,
+a:visited {
+	color: var(--color-blue);
+}
+
 @media screen and (min-width: 640px) {
 	.generador_container {
 		max-width: 500px;
 		width: 100%;
 		margin: 0 auto;
-		margin-top: 3rem;
 	}
 }
