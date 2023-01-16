@@ -5,6 +5,7 @@
 	--shadow-md: 3px 3px 3px #4f8bde, -5px -5px 3px #fdfdfd;
 	--border-sm: 0.3125rem;
 	--border-md: 0.625rem;
+	cursor: url('model.png'), auto;
 }
 
 *,
@@ -138,6 +139,7 @@ input[type='range'] {
 	background-image: linear-gradient(#9cc1f4, #1d64c7);
 	height: 0.5rem;
 	border-radius: var(--border-md);
+	cursor: url('model.png'), auto;
 }
 
 input[type='range']::-webkit-slider-thumb {
@@ -164,12 +166,14 @@ input[type='range']::-webkit-slider-thumb {
 input[type='checkbox'] {
 	width: 1rem;
 	height: 1rem;
+	cursor: url('model.png'), auto;
 }
 
 label {
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
+	cursor: url('model.png'), auto;
 }
 
 .footer {
