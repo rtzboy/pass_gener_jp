@@ -32,7 +32,8 @@ body {
 }
 
 .generador_container {
-	min-height: 100vh;
+	min-height: 100dvh;
+	height: 100dvh;
 	display: flex;
 	flex-direction: column;
 
@@ -276,7 +277,6 @@ a:visited {
 		max-width: 500px;
 		width: 100%;
 		margin: 0 auto;
-		height: 100dvh;
 	}
 
 	.btn_theme {
