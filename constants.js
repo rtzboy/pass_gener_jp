@@ -15,4 +15,4 @@ const SYMBOLS = [
 	62, 63, 64, 91, 92, 93, 94, 95, 96, 123, 124, 125, 126
 ];
 
-export { UPPER, LOWER, NUMBERS, SYMBOLS };
+export { LOWER, NUMBERS, SYMBOLS, UPPER };

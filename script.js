@@ -74,12 +74,17 @@ const alwaysChecked = () => {
 	}
 };
 
+const copyPass = () => {
+	const pass = document.querySelector('#pass');
+	navigator.clipboard.writeText(pass.value);
+};
+
 document.addEventListener('click', evt => {
 	if (evt.target.matches('.icon_refresh')) {
 		pass.value = generatePass();
 	}
 	if (evt.target.matches('.icon_copy')) return copyPass();
-	if (evt.target.matches('.btn_copy')) return copyPass();
+	if (evt.target.matches('.btn_theme')) return fnTheme();
 });
 
 range.addEventListener('input', evt => {
@@ -93,7 +98,47 @@ for (const node of listCheckbox) {
 	});
 }
 
+const fnTheme = () => {
+	const $btn_theme = document.querySelector('.btn_theme');
+	let sun = '☀️';
+	let moon = '🌙';
+
+	if ($btn_theme.textContent === moon) {
+		document.documentElement.setAttribute('data-theme', 'dark');
+		localStorage.setItem('data-theme', 'dark');
+		$btn_theme.textContent = sun;
+		return;
+	}
+
+	if ($btn_theme.textContent === sun) {
+		document.documentElement.setAttribute('data-theme', 'light');
+		localStorage.setItem('data-theme', 'light');
+		$btn_theme.textContent = moon;
+		return;
+	}
+};
+
+const checkThemeStorage = () => {
+	const $btn_theme = document.querySelector('.btn_theme');
+	let storageTheme = localStorage.getItem('data-theme');
+	let sun = '☀️';
+	let moon = '🌙';
+
+	if (!storageTheme) return;
+
+	if (storageTheme === 'dark') {
+		document.documentElement.setAttribute('data-theme', 'dark');
+		$btn_theme.textContent = sun;
+	}
+
+	if (storageTheme === 'light') {
+		document.documentElement.setAttribute('data-theme', 'light');
+		$btn_theme.textContent = moon;
+	}
+};
+
 window.addEventListener('DOMContentLoaded', evt => {
 	txtRange.value = range.value;
 	pass.value = generatePass();
+	checkThemeStorage();
 });
