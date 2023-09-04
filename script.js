@@ -85,7 +85,7 @@ const alertFloating = () => {
 	$alertFloating.classList.add('visible');
 	setTimeout(() => {
 		$alertFloating.classList.remove('visible');
-	}, 1000);
+	}, 1600);
 };
 
 document.addEventListener('click', evt => {
