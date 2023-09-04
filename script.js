@@ -77,6 +77,15 @@ const alwaysChecked = () => {
 const copyPass = () => {
 	const pass = document.querySelector('#pass');
 	navigator.clipboard.writeText(pass.value);
+	alertFloating();
+};
+
+const alertFloating = () => {
+	const $alertFloating = document.querySelector('.info_floating');
+	$alertFloating.classList.add('visible');
+	setTimeout(() => {
+		$alertFloating.classList.remove('visible');
+	}, 1000);
 };
 
 document.addEventListener('click', evt => {

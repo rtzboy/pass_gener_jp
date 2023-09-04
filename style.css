@@ -243,6 +243,34 @@ a:visited {
 	color: var(--color-text);
 }
 
+.info_floating {
+	opacity: 0;
+	visibility: hidden;
+
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	z-index: 99;
+	position: absolute;
+	border-radius: 1rem;
+	background-color: var(--color-text);
+	padding: 0.4rem 1.1rem;
+	font-weight: 600;
+	color: var(--bg-main);
+	left: 50%;
+	top: 10px;
+	transform: translate(-50%);
+	transition: all 0.4s ease-in-out;
+}
+
+.info_floating > img {
+	width: 1.4rem;
+}
+.info_floating.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
 @media screen and (min-width: 640px) {
 	.generador_container {
 		max-width: 500px;
